@@ -3,7 +3,7 @@ import './HomePage.css'
 import CoinsContainer from 'Components/HomePage/CoinsContainer'
 
 interface TradingRecordsProps {
-    tradingRecords: [string];
+    tradingRecords?: [string];
 }
 
 async function getOwnedCoins() {
@@ -63,6 +63,10 @@ function HomePage({ tradingRecords }: TradingRecordsProps) {
             </div>
         </>
     )
+}
+
+HomePage.defaultProps = {
+    tradingRecords: ['This is trading logs']
 }
 
 export default HomePage

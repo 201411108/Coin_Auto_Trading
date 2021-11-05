@@ -55,4 +55,8 @@ function GlobalNavigationBar({ setTradingRecords }: SetTradingRecordsProps) {
     )
 }
 
+GlobalNavigationBar.defaultProps = {
+    setTradingRecords: () => console.log('trading records')
+}
+
 export default GlobalNavigationBar
